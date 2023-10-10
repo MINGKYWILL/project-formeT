@@ -1,0 +1,22 @@
+/* Navigation */
+.nav__container {
+  height: 7.2rem;
+  align-items: center;
+  display: flex;
+  margin-bottom: 4.8rem;
+}
+
+/* Movie  */
+movie__lists--container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie__lists {
+  display: inline-block;
+  width: 40rem;
+  height: 6.2rem;
+}
+
+.detail-page {
+  background-color: #101010;
+}

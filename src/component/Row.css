@@ -1,0 +1,86 @@
+.row__title {
+  color: azure;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: 2rem;
+  margin-bottom: 0.6rem;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+  position: relative;
+}
+.row__images {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  opacity: 1;
+  width: 155rem;
+}
+.row__images::-webkit-scrollbar {
+  display: none;
+}
+.row_image {
+  margin: 0 1rem;
+  padding: 1rem 0;
+  height: 27rem;
+  width: auto;
+  object-fit: contain;
+  transition: transform 1s;
+  border-radius: 8%;
+}
+.row__images img:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.slider__button {
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  width: 4.8rem;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background-clip: content-box;
+  background-color: transparent;
+  transition: 1s all ease-in-out;
+  visibility: hidden;
+}
+.slider:hover .slider__button.left-button,
+.slider:hover .slider__button.right-button {
+  visibility: visible;
+}
+
+.slider__button.left-button {
+  left: 0;
+}
+
+.slider__button.right-button {
+  right: 0;
+}
+.slider__button.left-button:hover,
+.slider__button.right-button:hover {
+  transition: 3s all ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .row__images {
+    width: 100%;
+  }
+
+  .row__images img {
+    margin: 0 0.5rem;
+    height: 23rem;
+  }
+
+  .slider__button {
+    width: 4rem;
+  }
+}
