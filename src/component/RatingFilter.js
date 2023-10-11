@@ -9,15 +9,17 @@ function RatingFilter({ selectedRating, onSelectRating }) {
   return (
     <RatingWrapper>
       <h2>Rating</h2>
-      <input
-        type="range"
-        min="0"
-        max="10"
-        step="0.1"
-        value={selectedRating}
-        onChange={handleRatingChange}
-      />
-      <span>{selectedRating}</span>
+      <div>
+        <input
+          type="range"
+          min="0"
+          max="10"
+          step="0.1"
+          value={selectedRating}
+          onChange={handleRatingChange}
+        />
+        <span>{selectedRating}</span>
+      </div>
     </RatingWrapper>
   );
 }
@@ -25,8 +27,14 @@ function RatingFilter({ selectedRating, onSelectRating }) {
 export default RatingFilter;
 
 const RatingWrapper = styled.div`
-  justify-content: center;
   h2 {
     font-size: 1.8rem;
+  }
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+  span {
+    font-size: 1.4rem;
   }
 `;

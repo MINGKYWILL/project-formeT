@@ -4,20 +4,22 @@ import styled from "styled-components";
 function YearFilter({ selectedYear, onSelectYear }) {
   const handleYearChange = (e) => {
     onSelectYear(e.target.value);
-    console.log(e.target);
   };
+  const curYear = new Date().getFullYear();
   return (
     <YearWrapper>
       <h2>Released Year</h2>
-      <input
-        type="range"
-        min="2000"
-        max="2023"
-        step="1"
-        value={selectedYear}
-        onChange={handleYearChange}
-      />
-      <span>{selectedYear}</span>
+      <div>
+        <input
+          type="range"
+          min="2000"
+          max={curYear}
+          step="1"
+          value={selectedYear}
+          onChange={handleYearChange}
+        />
+        <span>{selectedYear}</span>
+      </div>
     </YearWrapper>
   );
 }
@@ -27,5 +29,12 @@ export default YearFilter;
 const YearWrapper = styled.div`
   h2 {
     font-size: 1.8rem;
+  }
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+  span {
+    font-size: 1.4rem;
   }
 `;
