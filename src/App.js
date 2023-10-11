@@ -3,6 +3,7 @@ import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 import Pick from "./routes/Pick";
 import Search from "./routes/Search";
+import "./App.css";
 
 export default function App({ mediaType }) {
   return (

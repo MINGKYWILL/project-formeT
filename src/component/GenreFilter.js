@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 function GenreFilter({ selectedGenres, onSelectGenres }) {
   const genres = [
@@ -84,7 +84,6 @@ function GenreFilter({ selectedGenres, onSelectGenres }) {
       </Title>
       <GenreLists>
         {genres.map((genre) => {
-          console.log("Genre:", genre);
           return (
             <div key={genre.id}>
               <input

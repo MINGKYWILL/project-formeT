@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import requests from "../api/requests";
-import axios from "../api/axios";
 import Nav from "../component/Nav";
 import "./Home.css";
 import Row from "../component/Row";
@@ -17,6 +16,7 @@ export default function Home() {
     }, []);
   };
   NavFunction();
+
   return (
     <div>
       <div className="nav__container">

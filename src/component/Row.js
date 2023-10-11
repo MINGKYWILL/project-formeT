@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import "./Row.css";
 import { Link } from "react-router-dom";
 
-function Row({ title, id, fetchUrl, mediaType }) {
+export default function Row({ title, id, fetchUrl, mediaType }) {
   const [mediaList, setMediaList] = useState([]);
   const scrollRef = useRef(null);
 
@@ -54,5 +54,3 @@ function Row({ title, id, fetchUrl, mediaType }) {
     </div>
   );
 }
-
-export default Row;

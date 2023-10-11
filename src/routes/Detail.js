@@ -4,7 +4,7 @@ import axios from "../api/axios";
 import Nav from "../component/Nav";
 import "./Detail.css";
 
-export default function Detail() {
+export default function Detail({ movie }) {
   const [details, setDetails] = useState([]);
   let { mediaId, mediaType } = useParams();
 

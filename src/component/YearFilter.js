@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 function YearFilter({ selectedYear, onSelectYear }) {
   const handleYearChange = (e) => {
@@ -26,6 +26,6 @@ export default YearFilter;
 
 const YearWrapper = styled.div`
   h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 `;

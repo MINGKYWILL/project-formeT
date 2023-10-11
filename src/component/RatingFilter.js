@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 function RatingFilter({ selectedRating, onSelectRating }) {
   const handleRatingChange = (e) => {
@@ -27,6 +27,6 @@ export default RatingFilter;
 const RatingWrapper = styled.div`
   justify-content: center;
   h2 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 `;

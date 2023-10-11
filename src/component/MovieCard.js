@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 function MovieCard({ movie }) {
   return (
@@ -20,20 +20,19 @@ export default MovieCard;
 const CardWrapper = styled.div`
   flex: auto;
   max-width: calc(18% - 20px); /* Adjust the width of each card */
-  border: 1px solid #e3e3e3;
   border-radius: 10px;
   overflow: hidden;
   box-sizing: border-box;
-  color: #101010;
-  background-color: #fff;
+  color: #fff;
+  background-color: #2b3035;
   transition: transform 0.5s;
 
   h2 {
-    font-size: 16px;
+    font-size: 1.4rem;
     padding: 20px 0 5px 10px;
   }
   p {
-    font-size: 14px;
+    font-size: 1.2rem;
   }
 
   .rating {
@@ -45,7 +44,6 @@ const CardWrapper = styled.div`
   img {
     max-width: 100%;
     height: auto;
-    // border-radius: 8px 8px 0 0;
   }
   &:hover {
     transform: scale(1.03);

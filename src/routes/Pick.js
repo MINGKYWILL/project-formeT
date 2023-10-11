@@ -84,7 +84,7 @@ export default function Pick() {
 
               return genreMatches && ratingMatches && yearMatches;
             })
-            .map((movie) => <MovieCard key={movie.id} movie={movie} />)
+            .map((movie, i) => <MovieCard key={i} movie={movie} />)
         ) : (
           <p>No movies found😢</p>
         )}
@@ -97,7 +97,7 @@ const Filters = styled.div`
   background-color: #6741d9;
   border-radius: 10px;
   display: flex;
-  margin: 12rem auto;
+  margin: 10rem auto 0 auto;
   width: 85%;
   justify-content: space-between;
   align-items: center;

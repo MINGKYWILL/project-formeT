@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoImage from "../images/logo-2.png";
 
-function Nav() {
+export default function Nav() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -21,11 +21,10 @@ function Nav() {
 
   return (
     <NavWrapper show={show ? "true" : "false"}>
-      <Logo>
-        <Link to={`/`}>
-          <img src={logoImage} alt="logo" />
-        </Link>
-      </Logo>
+      <LogoLink to={`/`}>
+        <img src={logoImage} alt="logo" />
+      </LogoLink>
+
       <Menu>
         <StyledLink to={`/`}>Home</StyledLink>
         <StyledLink to={`/search`}>Search</StyledLink>
@@ -34,7 +33,6 @@ function Nav() {
     </NavWrapper>
   );
 }
-export default Nav;
 
 const NavWrapper = styled.nav`
   position: fixed;
@@ -50,7 +48,7 @@ const NavWrapper = styled.nav`
   z-index: 10;
 `;
 
-const Logo = styled.a`
+const LogoLink = styled(Link)`
   padding: 0;
   width: 15rem;
 
