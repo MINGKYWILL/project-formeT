@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function MovieCard({ movie }) {
+export default function MovieCard({ movie }) {
   return (
     <CardWrapper className="movie-card">
       <img
@@ -14,8 +14,6 @@ function MovieCard({ movie }) {
     </CardWrapper>
   );
 }
-
-export default MovieCard;
 
 const CardWrapper = styled.div`
   flex: auto;
