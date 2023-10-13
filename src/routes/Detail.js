@@ -7,7 +7,7 @@ import "./Detail.css";
 export default function Detail({ movie }) {
   const [details, setDetails] = useState([]);
   let { mediaId, mediaType } = useParams();
-
+  console.log(details);
   const getMovie = async () => {
     const request = await axios.get(
       `https://api.themoviedb.org/3/${mediaType}/${mediaId}`

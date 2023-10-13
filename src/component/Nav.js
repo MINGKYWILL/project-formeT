@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logoImage from "../images/logo-2.png";
+import logoImage from "../images/main-logo.png";
 
 export default function Nav() {
   const [show, setShow] = useState(false);
@@ -53,7 +53,7 @@ const LogoLink = styled(Link)`
   width: 15rem;
 
   img {
-    height: 4.8rem;
+    height: 6.4rem;
   }
 `;
 
